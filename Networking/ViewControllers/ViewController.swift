@@ -9,15 +9,15 @@ import UIKit
 
 enum Link {
     case mostPopular
-        case test
+    case threeRandomAnimeScoreOverSeven
     
     var url: URL {
         switch self {
         case .mostPopular:
             return URL(string:
                         "https://shikimori.me/api/animes?season=spring_2023&kind=tv&order=popularity&limit=10")!
-        case .test:
-            return URL(string: "https://swiftbook.ru//wp-content/uploads/api/api_courses")!
+        case .threeRandomAnimeScoreOverSeven:
+            return URL(string: "https://shikimori.me/api/animes?kind=tv&order=random&limit=3&score=7")!
         }
     }
 }
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         fetchAnime()
-        //fetchTest()
+        fetchRandomAnime()
     }
     
 }
@@ -52,8 +52,9 @@ extension ViewController {
         }.resume()
     }
     
-    private func fetchTest() {
-        URLSession.shared.dataTask(with: Link.test.url) { data, _, error in
+    private func fetchRandomAnime(){
+        URLSession.shared.dataTask(with: Link.threeRandomAnimeScoreOverSeven.url)
+        { data, _, error in
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
@@ -61,8 +62,8 @@ extension ViewController {
             
             do {
                 let decoder = JSONDecoder()
-                let test = try decoder.decode([Course].self, from: data)
-                print(test)
+                let animesRandom = try decoder.decode([Anime].self, from: data)
+                print(animesRandom)
             } catch {
                 print(error)
             }
