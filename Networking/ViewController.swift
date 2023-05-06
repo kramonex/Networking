@@ -15,7 +15,7 @@ enum Link {
         switch self {
         case .mostPopular:
             return URL(string:
-                        "https://shikimori.me/api/animes?season=spring_2023&kind=tv&order=popularity&limit=2)")!
+                        "https://shikimori.me/api/animes?season=spring_2023&kind=tv&order=popularity&limit=10")!
         case .test:
             return URL(string: "https://swiftbook.ru//wp-content/uploads/api/api_courses")!
         }
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         fetchAnime()
-        //        fetchTest()
+        //fetchTest()
     }
     
 }

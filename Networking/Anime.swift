@@ -7,20 +7,16 @@
 
 import Foundation
 
-//struct AnimeList: Decodable {
-//    let animes: [Anime]
-//}
 
 struct Anime: Decodable {
-    let id: Int
-//    let russian: String
-//    let image: String
-//    let kind: String
-//    let score: String
-//    let status: String
+    let russian: String
+    let image: AnimeImage
+    let kind: String
+    let score: String
+    let status: String
 }
 
-struct Image: Decodable {
+struct AnimeImage: Decodable {
     let original: String
 }
 
