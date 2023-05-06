@@ -39,6 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D11E5F22A06623A0074A073 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D9F96DF2A043D73005832A9 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6D11E5F32A06626F0074A073 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D9F96EF2A044BBF005832A9 /* Anime.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6D11E5F52A0662AE0074A073 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6D9F96E12A043D73005832A9 /* Main.storyboard */,
+				6D9F96E62A043D74005832A9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6D11E5F62A0662D50074A073 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6D9F96DD2A043D73005832A9 /* SceneDelegate.swift */,
+				6D9F96DB2A043D73005832A9 /* AppDelegate.swift */,
+				6D9F96E92A043D74005832A9 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		6D9F96CF2A043D73005832A9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +93,11 @@
 		6D9F96DA2A043D73005832A9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				6D9F96DB2A043D73005832A9 /* AppDelegate.swift */,
-				6D9F96DD2A043D73005832A9 /* SceneDelegate.swift */,
-				6D9F96DF2A043D73005832A9 /* ViewController.swift */,
-				6D9F96EF2A044BBF005832A9 /* Anime.swift */,
-				6D9F96E12A043D73005832A9 /* Main.storyboard */,
+				6D11E5F62A0662D50074A073 /* App */,
+				6D11E5F22A06623A0074A073 /* ViewControllers */,
+				6D11E5F32A06626F0074A073 /* Models */,
+				6D11E5F52A0662AE0074A073 /* Storyboards */,
 				6D9F96E42A043D74005832A9 /* Assets.xcassets */,
-				6D9F96E62A043D74005832A9 /* LaunchScreen.storyboard */,
-				6D9F96E92A043D74005832A9 /* Info.plist */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
