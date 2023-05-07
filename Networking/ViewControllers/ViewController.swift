@@ -22,7 +22,7 @@ enum Link {
     }
 }
     
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +35,8 @@ class ViewController: UIViewController {
 
 extension ViewController {
     private func fetchAnime() {
-        URLSession.shared.dataTask(with: Link.mostPopular.url) { data, _,
-            error in
+        URLSession.shared.dataTask(with: Link.mostPopular.url)
+        { data, _, error in
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
