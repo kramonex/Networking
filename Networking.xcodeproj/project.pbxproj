@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D11E5F82A098E870074A073 /* RandomAnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D11E5F72A098E870074A073 /* RandomAnimeViewController.swift */; };
+		6D11E5FC2A099A3E0074A073 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D11E5FB2A099A3E0074A073 /* CollectionViewController.swift */; };
 		6D9F96DC2A043D73005832A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F96DB2A043D73005832A9 /* AppDelegate.swift */; };
 		6D9F96DE2A043D73005832A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F96DD2A043D73005832A9 /* SceneDelegate.swift */; };
-		6D9F96E02A043D73005832A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F96DF2A043D73005832A9 /* ViewController.swift */; };
+		6D9F96E02A043D73005832A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F96DF2A043D73005832A9 /* MainViewController.swift */; };
 		6D9F96E32A043D73005832A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9F96E12A043D73005832A9 /* Main.storyboard */; };
 		6D9F96E52A043D74005832A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D9F96E42A043D74005832A9 /* Assets.xcassets */; };
 		6D9F96E82A043D74005832A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9F96E62A043D74005832A9 /* LaunchScreen.storyboard */; };
@@ -17,10 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D11E5F72A098E870074A073 /* RandomAnimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnimeViewController.swift; sourceTree = "<group>"; };
+		6D11E5FB2A099A3E0074A073 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		6D9F96D82A043D73005832A9 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D9F96DB2A043D73005832A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D9F96DD2A043D73005832A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6D9F96DF2A043D73005832A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D9F96DF2A043D73005832A9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6D9F96E22A043D73005832A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D9F96E42A043D74005832A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D9F96E72A043D74005832A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,7 +46,9 @@
 		6D11E5F22A06623A0074A073 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6D9F96DF2A043D73005832A9 /* ViewController.swift */,
+				6D9F96DF2A043D73005832A9 /* MainViewController.swift */,
+				6D11E5F72A098E870074A073 /* RandomAnimeViewController.swift */,
+				6D11E5FB2A099A3E0074A073 /* CollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D9F96E02A043D73005832A9 /* ViewController.swift in Sources */,
+				6D11E5FC2A099A3E0074A073 /* CollectionViewController.swift in Sources */,
+				6D9F96E02A043D73005832A9 /* MainViewController.swift in Sources */,
 				6D9F96F02A044BBF005832A9 /* Anime.swift in Sources */,
 				6D9F96DC2A043D73005832A9 /* AppDelegate.swift in Sources */,
+				6D11E5F82A098E870074A073 /* RandomAnimeViewController.swift in Sources */,
 				6D9F96DE2A043D73005832A9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,7 @@ struct Anime: Decodable {
 }
 
 struct AnimeImage: Decodable {
-    let original: String
+    let preview: String
 }
 
 

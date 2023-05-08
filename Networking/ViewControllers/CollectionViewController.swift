@@ -1,11 +1,12 @@
 //
-//  ViewController.swift
+//  CollectionViewController.swift
 //  Networking
 //
-//  Created by kramonex on 04.05.2023.
+//  Created by kramonex on 08.05.2023.
 //
 import Foundation
 import UIKit
+
 
 enum Link {
     case mostPopular
@@ -14,26 +15,50 @@ enum Link {
     var url: URL {
         switch self {
         case .mostPopular:
-            return URL(string:
-                        "https://shikimori.me/api/animes?season=spring_2023&kind=tv&order=popularity&limit=10")!
+            return URL(
+                string:
+                "https://shikimori.me/api/animes?season=spring_2023&kind=tv&order=popularity&limit=10"
+            )!
         case .threeRandomAnimeScoreOverSeven:
-            return URL(string: "https://shikimori.me/api/animes?kind=tv&order=random&limit=3&score=7")!
+            return URL(
+                string:
+                "https://shikimori.me/api/animes?kind=tv&order=random&limit=3&score=7"
+            )!
         }
     }
 }
-    
-final class ViewController: UIViewController {
-    
+  
+
+
+final class CollectionViewController: UICollectionViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         fetchAnime()
         fetchRandomAnime()
     }
+
+
+
+    // MARK: UICollectionViewDataSource
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "animeCard", for: indexPath)
     
+        // Configure the cell
+    
+        return cell
+    }
+
+
 }
 
-extension ViewController {
+extension CollectionViewController {
     private func fetchAnime() {
         URLSession.shared.dataTask(with: Link.mostPopular.url)
         { data, _, error in
@@ -70,5 +95,3 @@ extension ViewController {
         }.resume()
     }
 }
-
-
